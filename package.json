@@ -1,0 +1,71 @@
+{
+  "name": "laravel-resource-index-vue",
+  "version": "0.1.0",
+  "description": "Vue composables for Laravel APIs powered by feldoe/laravel-resource-index.",
+  "keywords": [
+    "laravel",
+    "vue",
+    "composable",
+    "resource",
+    "index"
+  ],
+  "homepage": "https://github.com/sem-feldoe/laravel-resource-index-vue#readme",
+  "bugs": {
+    "url": "https://github.com/sem-feldoe/laravel-resource-index-vue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sem-feldoe/laravel-resource-index-vue.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./use-api": {
+      "types": "./dist/useApi.d.ts",
+      "import": "./dist/useApi.js"
+    },
+    "./use-base-url": {
+      "types": "./dist/useBaseUrl.d.ts",
+      "import": "./dist/useBaseUrl.js"
+    },
+    "./use-resource-index": {
+      "types": "./dist/useResourceIndex.d.ts",
+      "import": "./dist/useResourceIndex.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --coverage",
+    "prepublishOnly": "bun run check && bun run test && bun run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "ofetch": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@vitest/coverage-v8": "^5.0.0",
+    "happy-dom": "^21.0.0",
+    "typescript": "^6.0.0",
+    "vitest": "^5.0.0",
+    "vue": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "bun@1.3.3"
+}

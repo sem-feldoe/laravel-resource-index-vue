@@ -1,0 +1,6 @@
+dist
+coverage
+node_modules
+*.tgz
+.idea
+.DS_Store
